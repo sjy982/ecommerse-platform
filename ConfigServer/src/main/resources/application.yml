@@ -1,0 +1,13 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: ConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:sjy982/config-repo.git
+          ignore-local-ssh-settings: true
+          private-key: ${PRIVATE_KEY}
